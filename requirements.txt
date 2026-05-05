@@ -1,0 +1,6 @@
+fastapi
+uvicorn
+streamlit
+streamlit-searchbox
+requests
+pytest
