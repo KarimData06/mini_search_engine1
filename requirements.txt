@@ -3,4 +3,5 @@ uvicorn
 streamlit
 streamlit-searchbox
 requests
+huggingface_hub
 pytest

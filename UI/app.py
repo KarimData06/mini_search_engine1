@@ -2,7 +2,8 @@ import streamlit as st
 import requests
 from streamlit_searchbox import st_searchbox
 
-API_URL = "http://127.0.0.1:8000"
+import os
+API_URL = os.getenv("API_URL", "http://127.0.0.1:8000")
 
 st.set_page_config(page_title="Mini Search Engine", page_icon="🔎", layout="wide")
 
