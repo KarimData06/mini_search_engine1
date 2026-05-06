@@ -107,7 +107,7 @@ if query:
                   </div>
                   <div class="card-abstract">{r['abstract']}</div>
                   <span class="score-pill">⭐ {r['score']}</span>
-                  {'<a class="pdf-btn" href="'+pdf+'" target="_blank">📄 Voir le PDF</a>' if pdf else ''}
+                  f'<a class="pdf-btn" href="{pdf}" target="_blank">📄 Voir le PDF</a>' if pdf else ''
                 </div>""", unsafe_allow_html=True)
 
             # ── Pagination ─────────────────────────────────────────
