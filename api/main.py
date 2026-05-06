@@ -59,7 +59,7 @@ def search(q: str, category: str = None, author: str = None,
             "title":    doc.get("title"),
             "abstract": doc.get("abstract","")[:200] + "...",
             "score":    round(score, 4),
-            "pdf_link": doc.get("pdf"),
+            "pdf": doc.get("pdf"),
             "category": doc.get("categories"),
             "authors":  doc.get("authors"),
         })

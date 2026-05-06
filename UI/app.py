@@ -98,17 +98,18 @@ if query:
 
             for r in results:
                 pdf = r.get("pdf", "")
+                pdf_btn = f'<a class="pdf-btn" href="{pdf}" target="_blank">📄 Voir le PDF</a>' if pdf else ''
                 st.markdown(f"""
                 <div class="card">
-                  <div class="card-title">{r['title']}</div>
-                  <div class="card-meta">
-                    <span class="badge">📂 {r.get('category','')}</span>
-                    ✍️ {r.get('authors','')[:80]}
-                  </div>
-                  <div class="card-abstract">{r['abstract']}</div>
-                  <span class="score-pill">⭐ {r['score']}</span>
-                  f'<a class="pdf-btn" href="{pdf}" target="_blank">📄 Voir le PDF</a>' if pdf else ''
-                </div>""", unsafe_allow_html=True)
+                <div class="card-title">{r['title']}</div>
+                <div class="card-meta">
+                <span class="badge">📂 {r.get('category','')}</span>
+                ✍️ {r.get('authors','')[:80]}
+            </div>
+            <div class="card-abstract">{r['abstract']}</div>
+            <span class="score-pill">⭐ {r['score']}</span>
+            {pdf_btn}
+            </div>""", unsafe_allow_html=True)
 
             # ── Pagination ─────────────────────────────────────────
             if pages > 1:
