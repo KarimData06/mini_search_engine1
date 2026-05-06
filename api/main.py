@@ -7,7 +7,7 @@ from huggingface_hub import hf_hub_download
 from core.search import SearchEngine
 from core.index import HashTable
 
-HF_REPO = "KarimData06/mini-search-cache"
+HF_REPO = "karimbnr06/mini-search-cache"
 
 def download_cache():
     os.makedirs("cache", exist_ok=True)
